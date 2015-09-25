@@ -17,12 +17,12 @@ namespace Gazo
         private void SettingForm_Load(object sender, EventArgs e)
         { 
             //found config?
-            if(!File.Exists(Form1.savepath + @"\config.xml"))
+            if(!File.Exists(ShotForm.savepath + @"\config.xml"))
                 return;
 
             //load
             XmlSerializer serializer = new XmlSerializer(typeof(GazoOpt));
-            StreamReader sr = new StreamReader(Form1.savepath +  @"\config.xml", new UTF8Encoding(false));
+            StreamReader sr = new StreamReader(ShotForm.savepath +  @"\config.xml", new UTF8Encoding(false));
             GazoOpt gazoconf = (GazoOpt)serializer.Deserialize(sr);
             sr.Close();
 
@@ -136,7 +136,7 @@ namespace Gazo
 
             //save
             XmlSerializer serializer = new XmlSerializer(typeof(GazoOpt));
-            StreamWriter sw = new StreamWriter(Form1.savepath +  @"\config.xml", false, new UTF8Encoding(false));
+            StreamWriter sw = new StreamWriter(ShotForm.savepath +  @"\config.xml", false, new UTF8Encoding(false));
             serializer.Serialize(sw, gazoconf);
             sw.Close();
 
@@ -150,9 +150,9 @@ namespace Gazo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(File.Exists(Form1.savepath +  @"\log.txt"))
+            if(File.Exists(ShotForm.savepath +  @"\log.txt"))
             {
-                Process.Start(Form1.savepath + @"\log.txt");
+                Process.Start(ShotForm.savepath + @"\log.txt");
             }
         }
 
@@ -168,7 +168,7 @@ namespace Gazo
 
         private void button4_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Form1.savepath);
+            MessageBox.Show(ShotForm.savepath);
         }
     }
 }

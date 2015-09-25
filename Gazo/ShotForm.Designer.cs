@@ -1,6 +1,6 @@
 ﻿namespace Gazo
 {
-    partial class Form1
+    partial class ShotForm
     {
         /// <summary>
         /// 必要なデザイナー変数です。
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShotForm));
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.設定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,9 +60,9 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.TateY);
             this.panel1.Controls.Add(this.YokoX);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(65, 50);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(130, 94);
+            this.panel1.Size = new System.Drawing.Size(30, 30);
             this.panel1.TabIndex = 1;
             this.panel1.Visible = false;
             // 
@@ -70,7 +70,7 @@
             // 
             this.TateY.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.TateY.AutoSize = true;
-            this.TateY.Location = new System.Drawing.Point(96, 76);
+            this.TateY.Location = new System.Drawing.Point(0, 2);
             this.TateY.Name = "TateY";
             this.TateY.Size = new System.Drawing.Size(29, 12);
             this.TateY.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             this.YokoX.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.YokoX.AutoSize = true;
-            this.YokoX.Location = new System.Drawing.Point(96, 64);
+            this.YokoX.Location = new System.Drawing.Point(0, 14);
             this.YokoX.Name = "YokoX";
             this.YokoX.Size = new System.Drawing.Size(29, 12);
             this.YokoX.TabIndex = 2;
@@ -91,7 +91,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(838, 548);
+            this.ClientSize = new System.Drawing.Size(663, 489);
             this.ContextMenuStrip = this.contextMenuStrip1;
             this.ControlBox = false;
             this.Controls.Add(this.panel1);

@@ -70,11 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitmaptoByte.cs" />
-    <Compile Include="Form1.cs">
+    <Compile Include="ShotForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="ShotForm.Designer.cs">
+      <DependentUpon>ShotForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GazoOpt.cs" />
     <Compile Include="Gyazo.cs" />
@@ -87,8 +87,8 @@
     <Compile Include="SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="ShotForm.resx">
+      <DependentUpon>ShotForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -117,13 +117,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="camera_multi.ico" />
     <Content Include="camico.ico" />
-    <Content Include="Compact_Camera_128px_1192294_easyicon.net.ico" />
-    <Content Include="photo-camera5.ico" />
     <None Include="sound.wav" />
-    <None Include="bin\Debug\sound.wav" />
     <Content Include="favicon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

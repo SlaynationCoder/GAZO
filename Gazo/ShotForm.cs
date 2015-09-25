@@ -9,11 +9,11 @@ using System.Xml.Serialization;
 
 namespace Gazo
 {
-    public partial class Form1 : Form
+    public partial class ShotForm : Form
     {
         public static string savepath = Application.CommonAppDataPath;
 
-        public Form1()
+        public ShotForm()
         {
             InitializeComponent();
         }
@@ -76,8 +76,6 @@ namespace Gazo
             }
 
             //Update
-            //xが横 yが縦(OK)
-
 
             if (START_X == MOUSE_x || START_Y == MOUSE_y)
                 return;
@@ -107,7 +105,7 @@ namespace Gazo
                 panel1.Size = new Size(MOUSE_x - START_X, START_Y - MOUSE_y);
             }
 
-            //update label
+            //update size view
             YokoX.Text = panel1.Size.Width.ToString();
             TateY.Text = panel1.Size.Height.ToString();
 
@@ -139,6 +137,7 @@ namespace Gazo
                     return;
                 }
 
+                //take SS
                 Bitmap bmp = new Bitmap(sizeWidth, sizeHeight);
 
                 Graphics g = Graphics.FromImage(bmp);
@@ -165,7 +164,7 @@ namespace Gazo
 
 
             //playsound
-            System.IO.Stream strm = Properties.Resources.sound;
+            Stream strm = Properties.Resources.sound;
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(strm);
             player.Play();
 
@@ -233,7 +232,8 @@ namespace Gazo
             if (gazoconf.Upload)
             {
                 string url = string.Empty;
-
+                
+                //upload and get URL
                 if (gazoconf.Uploader == "IMGUR")
                 {
                     Imgur imgurAPI = new Imgur("4b696ba615fcf6a");
@@ -245,12 +245,13 @@ namespace Gazo
                     url = gyazoAPI.Upload(bmp) + "?api";
                 }
 
-
+                //copy URL
                 if (gazoconf.Upload_CopyUrl)
                 {
                     Clipboard.SetText(url);
                 }
 
+                //open URL
                 if (gazoconf.Upload_OpenUrl)
                 {
                     Process.Start(url);
@@ -260,8 +261,10 @@ namespace Gazo
 
             }
 
-
+            //playsound wait
             Thread.Sleep(300);
+
+            //force CLOSE
             Application.Exit();
 
         }
