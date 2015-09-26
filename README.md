@@ -1,11 +1,11 @@
-#Gyazo ScreenShot
+#Gazo
 
 ## Description
-
+ScreenShot Software for Windows
 ## Features
 
-## Demo
-
+## Lang
+Japanese
 ## Requirement
 Windows Vista,7,8,10
 
