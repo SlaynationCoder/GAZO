@@ -13,7 +13,7 @@ namespace Gazo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ShotForm());
+            Application.Run(new Gazo());
         }
     }
 }

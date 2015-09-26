@@ -70,11 +70,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitmaptoByte.cs" />
-    <Compile Include="ShotForm.cs">
+    <Compile Include="Gazo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShotForm.Designer.cs">
-      <DependentUpon>ShotForm.cs</DependentUpon>
+    <Compile Include="Gazo.Designer.cs">
+      <DependentUpon>Gazo.cs</DependentUpon>
     </Compile>
     <Compile Include="GazoOpt.cs" />
     <Compile Include="Gyazo.cs" />
@@ -87,8 +87,8 @@
     <Compile Include="SettingForm.Designer.cs">
       <DependentUpon>SettingForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ShotForm.resx">
-      <DependentUpon>ShotForm.cs</DependentUpon>
+    <EmbeddedResource Include="Gazo.resx">
+      <DependentUpon>Gazo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

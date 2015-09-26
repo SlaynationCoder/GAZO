@@ -9,11 +9,11 @@ using System.Xml.Serialization;
 
 namespace Gazo
 {
-    public partial class ShotForm : Form
+    public partial class Gazo : Form
     {
         public static string savepath = Application.CommonAppDataPath;
 
-        public ShotForm()
+        public Gazo()
         {
             InitializeComponent();
         }
@@ -50,6 +50,15 @@ namespace Gazo
             //drag start
             if (e.Button == MouseButtons.Left)
                 PanelUpdate();
+
+            //dragging rightclick to cancel
+
+            if (cutting && e.Button == MouseButtons.Right)
+            {
+                this.Close();
+                Application.Exit();
+                return;
+            }
         }
 
 
@@ -121,6 +130,7 @@ namespace Gazo
 
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
+            
             if (cutting)
             {
                 this.Visible = false;
