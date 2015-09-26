@@ -1,7 +1,4 @@
 #Gyazo ScreenShot
-====
-
-Overview
 
 ## Description
 
@@ -10,13 +7,14 @@ Overview
 ## Demo
 
 ## Requirement
-
+Windows Vista,7,8,10
+.Net Framework 4.5~
 ## Install
 
 ## Usage
 
 ## Licence
-GPLv3
+[GPLv3](http://www.gnu.org/licenses/)
 
 Copyright (C) 2015 Slaynation_Coder
 
@@ -25,4 +23,3 @@ This program is free software; you can redistribute it and/or modify it under th
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License along with this program. If not, see <http://www.gnu.org/licenses/>.
-[GPLv3](http://www.gnu.org/licenses/)
