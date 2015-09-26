@@ -8,7 +8,9 @@
 
 ## Requirement
 Windows Vista,7,8,10
+
 .Net Framework 4.5~
+
 ## Install
 
 ## Usage
