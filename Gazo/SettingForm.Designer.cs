@@ -53,8 +53,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.gazo = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
             this.saveSubPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -202,6 +203,7 @@
             // 
             // uploadsubPanel
             // 
+            this.uploadsubPanel.Controls.Add(this.gazo);
             this.uploadsubPanel.Controls.Add(this.flickr);
             this.uploadsubPanel.Controls.Add(this.label2);
             this.uploadsubPanel.Controls.Add(this.EnableUploadCopyUrl_check);
@@ -308,6 +310,16 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "その他";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(89, 17);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 1;
+            this.button4.Text = "設定保存先を表示";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(8, 17);
@@ -318,15 +330,16 @@
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button4
+            // gazo
             // 
-            this.button4.Location = new System.Drawing.Point(89, 17);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 1;
-            this.button4.Text = "設定保存先を表示";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.gazo.AutoSize = true;
+            this.gazo.Location = new System.Drawing.Point(170, 0);
+            this.gazo.Name = "gazo";
+            this.gazo.Size = new System.Drawing.Size(46, 16);
+            this.gazo.TabIndex = 10;
+            this.gazo.TabStop = true;
+            this.gazo.Text = "gazo";
+            this.gazo.UseVisualStyleBackColor = true;
             // 
             // SettingForm
             // 
@@ -386,5 +399,6 @@
         private System.Windows.Forms.RadioButton JPG;
         private System.Windows.Forms.RadioButton PNG;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.RadioButton gazo;
     }
 }

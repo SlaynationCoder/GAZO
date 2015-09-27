@@ -44,6 +44,10 @@ namespace Gazo
             {
                 gyazo.Checked = true;
             }
+            else if(gazoconf.Uploader == "GAZO")
+            {
+                gazo.Checked = true;
+            }
 
             //savetype
             if (gazoconf.FileSave_Type == "PNG")
@@ -113,6 +117,10 @@ namespace Gazo
             else if (gyazo.Checked)
             {
                 gazoconf.Uploader = "GYAZO";
+            }
+            else if (gazo.Checked)
+            {
+                gazoconf.Uploader = "GAZO";
             }
 
             //savetype
