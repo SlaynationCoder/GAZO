@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BitmaptoByte.cs" />
+    <Compile Include="FTPAPI.cs" />
     <Compile Include="Gazo.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -6,7 +6,6 @@ using System.IO;
 using System.Threading;
 using System.Windows.Forms;
 using System.Xml.Serialization;
-
 namespace Gazo
 {
     public partial class Gazo : Form
@@ -19,7 +18,7 @@ namespace Gazo
         }
 
         bool cutting;
-
+        
         int START_X;
         int START_Y;
 
@@ -171,8 +170,6 @@ namespace Gazo
 
         void Shot(Bitmap bmp)
         {
-
-
             //playsound
             Stream strm = Properties.Resources.sound;
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(strm);
@@ -254,7 +251,14 @@ namespace Gazo
                     Gyazo gyazoAPI = new Gyazo("e3177a1fa01bf6aa55de6bbd54d00fe6fb8e2b1e7068d417135277c21a8085a3");
                     url = gyazoAPI.Upload(bmp) + "?api";
                 }
-
+                else if(gazoconf.Uploader == "GAZO")
+                {
+                    FTPAPI ftp = new FTPAPI();
+                    Random gen = new Random();
+                    int randomint = gen.Next(123456);
+                    ftp.Up(BitmaptoPNGByte.Convert(bmp), String.Format("ftp://gazoserver.web.fc2.com/{0}.bmp", randomint));
+                    url = String.Format("http://gazoserver.web.fc2.com/{0}.bmp", randomint);
+                }
                 //copy URL
                 if (gazoconf.Upload_CopyUrl)
                 {
