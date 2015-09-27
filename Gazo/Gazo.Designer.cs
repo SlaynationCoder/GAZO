@@ -60,7 +60,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.TateY);
             this.panel1.Controls.Add(this.YokoX);
-            this.panel1.Location = new System.Drawing.Point(65, 50);
+            this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(30, 30);
             this.panel1.TabIndex = 1;
@@ -86,7 +86,7 @@
             this.YokoX.TabIndex = 2;
             this.YokoX.Text = "9999";
             // 
-            // Form1
+            // Gazo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -98,7 +98,7 @@
             this.Cursor = System.Windows.Forms.Cursors.Cross;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form1";
+            this.Name = "Gazo";
             this.Opacity = 0.4D;
             this.Text = "GAZO_";
             this.TopMost = true;
