@@ -26,10 +26,9 @@ namespace Gazo
 
             using (var w = new WebClient())
             {
-                var values = new NameValueCollection
-                {
-                {"image", Convert.ToBase64String(content)}
-                };
+                var values = new NameValueCollection();
+
+                values.Add("image", Convert.ToBase64String(content));
 
                 w.Headers.Add("Authorization", "Client-ID " + ClientID);
                 byte[] response = w.UploadValues("https://api.imgur.com/3/upload", values);

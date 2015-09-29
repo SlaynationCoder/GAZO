@@ -11,6 +11,7 @@ namespace Gazo
     {
         public string APIkey { get; private set; }
 
+
         public Gyazo(string apikey)
         {
             APIkey = apikey;

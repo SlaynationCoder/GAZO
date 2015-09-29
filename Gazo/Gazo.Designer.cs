@@ -44,13 +44,13 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.設定ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(99, 26);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
             // 
             // 設定ToolStripMenuItem
             // 
             this.設定ToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("設定ToolStripMenuItem.Image")));
             this.設定ToolStripMenuItem.Name = "設定ToolStripMenuItem";
-            this.設定ToolStripMenuItem.Size = new System.Drawing.Size(98, 22);
+            this.設定ToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
             this.設定ToolStripMenuItem.Text = "設定";
             this.設定ToolStripMenuItem.Click += new System.EventHandler(this.設定ToolStripMenuItem_Click);
             // 
@@ -99,7 +99,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Gazo";
-            this.Opacity = 0.4D;
+            this.Opacity = 0.6D;
             this.Text = "GAZO_";
             this.TopMost = true;
             this.TransparencyKey = System.Drawing.Color.OrangeRed;
