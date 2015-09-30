@@ -216,12 +216,10 @@
             // GAZO
             // 
             this.GAZO.AutoSize = true;
-            this.GAZO.Checked = true;
-            this.GAZO.Location = new System.Drawing.Point(0, 0);
+            this.GAZO.Location = new System.Drawing.Point(170, 0);
             this.GAZO.Name = "GAZO";
             this.GAZO.Size = new System.Drawing.Size(54, 16);
             this.GAZO.TabIndex = 10;
-            this.GAZO.TabStop = true;
             this.GAZO.Text = "GAZO";
             this.GAZO.UseVisualStyleBackColor = true;
             // 
@@ -229,7 +227,7 @@
             // 
             this.flickr.AutoSize = true;
             this.flickr.Enabled = false;
-            this.flickr.Location = new System.Drawing.Point(175, 0);
+            this.flickr.Location = new System.Drawing.Point(115, 0);
             this.flickr.Name = "flickr";
             this.flickr.Size = new System.Drawing.Size(49, 16);
             this.flickr.TabIndex = 9;
@@ -258,7 +256,7 @@
             // imgur
             // 
             this.imgur.AutoSize = true;
-            this.imgur.Location = new System.Drawing.Point(118, 0);
+            this.imgur.Location = new System.Drawing.Point(58, 0);
             this.imgur.Name = "imgur";
             this.imgur.Size = new System.Drawing.Size(51, 16);
             this.imgur.TabIndex = 7;
@@ -278,10 +276,12 @@
             // gyazo
             // 
             this.gyazo.AutoSize = true;
-            this.gyazo.Location = new System.Drawing.Point(60, 0);
+            this.gyazo.Checked = true;
+            this.gyazo.Location = new System.Drawing.Point(0, 0);
             this.gyazo.Name = "gyazo";
             this.gyazo.Size = new System.Drawing.Size(52, 16);
             this.gyazo.TabIndex = 8;
+            this.gyazo.TabStop = true;
             this.gyazo.Text = "gyazo";
             this.gyazo.UseVisualStyleBackColor = true;
             // 
