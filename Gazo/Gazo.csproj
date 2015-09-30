@@ -84,6 +84,7 @@
     <Compile Include="Gazo.Designer.cs">
       <DependentUpon>Gazo.cs</DependentUpon>
     </Compile>
+    <Compile Include="GazoAPI.cs" />
     <Compile Include="GazoOpt.cs" />
     <Compile Include="Gyazo.cs" />
     <Compile Include="Imgur.cs" />

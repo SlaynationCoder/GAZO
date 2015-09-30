@@ -43,6 +43,7 @@
             this.EnableAutoOpenFile_check = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.uploadsubPanel = new System.Windows.Forms.Panel();
+            this.GAZO = new System.Windows.Forms.RadioButton();
             this.flickr = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.EnableUploadCopyUrl_check = new System.Windows.Forms.CheckBox();
@@ -52,6 +53,7 @@
             this.EnableUpload_check = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.saveSubPanel.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -198,6 +200,7 @@
             // 
             // uploadsubPanel
             // 
+            this.uploadsubPanel.Controls.Add(this.GAZO);
             this.uploadsubPanel.Controls.Add(this.flickr);
             this.uploadsubPanel.Controls.Add(this.label2);
             this.uploadsubPanel.Controls.Add(this.EnableUploadCopyUrl_check);
@@ -210,11 +213,23 @@
             this.uploadsubPanel.Size = new System.Drawing.Size(337, 80);
             this.uploadsubPanel.TabIndex = 9;
             // 
+            // GAZO
+            // 
+            this.GAZO.AutoSize = true;
+            this.GAZO.Checked = true;
+            this.GAZO.Location = new System.Drawing.Point(0, 0);
+            this.GAZO.Name = "GAZO";
+            this.GAZO.Size = new System.Drawing.Size(54, 16);
+            this.GAZO.TabIndex = 10;
+            this.GAZO.TabStop = true;
+            this.GAZO.Text = "GAZO";
+            this.GAZO.UseVisualStyleBackColor = true;
+            // 
             // flickr
             // 
             this.flickr.AutoSize = true;
             this.flickr.Enabled = false;
-            this.flickr.Location = new System.Drawing.Point(115, 0);
+            this.flickr.Location = new System.Drawing.Point(175, 0);
             this.flickr.Name = "flickr";
             this.flickr.Size = new System.Drawing.Size(49, 16);
             this.flickr.TabIndex = 9;
@@ -243,7 +258,7 @@
             // imgur
             // 
             this.imgur.AutoSize = true;
-            this.imgur.Location = new System.Drawing.Point(58, 0);
+            this.imgur.Location = new System.Drawing.Point(118, 0);
             this.imgur.Name = "imgur";
             this.imgur.Size = new System.Drawing.Size(51, 16);
             this.imgur.TabIndex = 7;
@@ -263,12 +278,10 @@
             // gyazo
             // 
             this.gyazo.AutoSize = true;
-            this.gyazo.Checked = true;
-            this.gyazo.Location = new System.Drawing.Point(0, 0);
+            this.gyazo.Location = new System.Drawing.Point(60, 0);
             this.gyazo.Name = "gyazo";
             this.gyazo.Size = new System.Drawing.Size(52, 16);
             this.gyazo.TabIndex = 8;
-            this.gyazo.TabStop = true;
             this.gyazo.Text = "gyazo";
             this.gyazo.UseVisualStyleBackColor = true;
             // 
@@ -293,11 +306,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(12, 307);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 7;
+            this.button3.Text = "履歴を表示";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // SettingForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(376, 336);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -346,5 +370,7 @@
         private System.Windows.Forms.RadioButton BMP;
         private System.Windows.Forms.RadioButton JPG;
         private System.Windows.Forms.RadioButton PNG;
+        private System.Windows.Forms.RadioButton GAZO;
+        private System.Windows.Forms.Button button3;
     }
 }

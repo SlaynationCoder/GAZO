@@ -60,6 +60,7 @@ namespace Gazo
             //送信するデータを書き込む
             reqStream.Write(startData, 0, startData.Length);
             //ファイルの内容を送信
+
             byte[] readData = new byte[0x1000];
             int readSize = 0;
             while (true)
@@ -69,6 +70,7 @@ namespace Gazo
                     break;
                 reqStream.Write(readData, 0, readSize);
             }
+
             ms.Close();
             reqStream.Write(endData, 0, endData.Length);
             reqStream.Close();

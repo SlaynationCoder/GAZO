@@ -178,8 +178,12 @@ namespace Gazo
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(strm);
             player.Play();
 
-            //copy clipboard
-            Clipboard.SetImage(bmp);
+            //copy clipboard PNG
+            System.IO.MemoryStream mms1 =new System.IO.MemoryStream();
+            bmp.Save(mms1,System.Drawing.Imaging.ImageFormat.Png);
+            System.Drawing.Image img = System.Drawing.Image.FromStream(mms1);
+
+            Clipboard.SetImage(img);
 
             //found config?
             if (!File.Exists(savepath + @"\config.xml"))
@@ -254,6 +258,11 @@ namespace Gazo
                     Gyazo gyazoAPI = new Gyazo("e3177a1fa01bf6aa55de6bbd54d00fe6fb8e2b1e7068d417135277c21a8085a3");
                     url = gyazoAPI.Upload(bmp) + "?api";
                 }
+                else if (gazoconf.Uploader == "GAZO")
+                {
+                    GazoAPI gazoAPI = new GazoAPI();
+                    url = gazoAPI.Upload(bmp);
+                }
 
                 //copy URL
                 if (gazoconf.Upload_CopyUrl)
@@ -291,7 +300,7 @@ namespace Gazo
             }
             catch (Exception)
             {
-                Warn("Failed write log");
+               
             }
 
         }

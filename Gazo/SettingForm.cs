@@ -44,6 +44,10 @@ namespace Gazo
             {
                 gyazo.Checked = true;
             }
+            else if (gazoconf.Uploader == "GAZO")
+            {
+                GAZO.Checked = true;
+            }
 
             //savetype
             if (gazoconf.FileSave_Type == "PNG")
@@ -114,6 +118,10 @@ namespace Gazo
             {
                 gazoconf.Uploader = "GYAZO";
             }
+            else if (GAZO.Checked)
+            {
+                gazoconf.Uploader = "GAZO";
+            }
 
             //savetype
             if(PNG.Checked)
@@ -150,10 +158,7 @@ namespace Gazo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if(File.Exists(Gazo.savepath +  @"\log.txt"))
-            {
-                Process.Start(Gazo.savepath + @"\log.txt");
-            }
+           
         }
 
         private void EnableUpload_check_CheckedChanged(object sender, EventArgs e)
@@ -169,6 +174,14 @@ namespace Gazo
         private void button4_Click(object sender, EventArgs e)
         {
             MessageBox.Show(Gazo.savepath);
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (File.Exists(Gazo.savepath + @"\log.txt"))
+            {
+                Process.Start(Gazo.savepath + @"\log.txt");
+            }
         }
     }
 }
