@@ -43,7 +43,6 @@
             this.EnableAutoOpenFile_check = new System.Windows.Forms.CheckBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.uploadsubPanel = new System.Windows.Forms.Panel();
-            this.GAZO = new System.Windows.Forms.RadioButton();
             this.flickr = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.EnableUploadCopyUrl_check = new System.Windows.Forms.CheckBox();
@@ -200,7 +199,6 @@
             // 
             // uploadsubPanel
             // 
-            this.uploadsubPanel.Controls.Add(this.GAZO);
             this.uploadsubPanel.Controls.Add(this.flickr);
             this.uploadsubPanel.Controls.Add(this.label2);
             this.uploadsubPanel.Controls.Add(this.EnableUploadCopyUrl_check);
@@ -212,16 +210,6 @@
             this.uploadsubPanel.Name = "uploadsubPanel";
             this.uploadsubPanel.Size = new System.Drawing.Size(337, 80);
             this.uploadsubPanel.TabIndex = 9;
-            // 
-            // GAZO
-            // 
-            this.GAZO.AutoSize = true;
-            this.GAZO.Location = new System.Drawing.Point(170, 0);
-            this.GAZO.Name = "GAZO";
-            this.GAZO.Size = new System.Drawing.Size(54, 16);
-            this.GAZO.TabIndex = 10;
-            this.GAZO.Text = "GAZO";
-            this.GAZO.UseVisualStyleBackColor = true;
             // 
             // flickr
             // 
@@ -370,7 +358,6 @@
         private System.Windows.Forms.RadioButton BMP;
         private System.Windows.Forms.RadioButton JPG;
         private System.Windows.Forms.RadioButton PNG;
-        private System.Windows.Forms.RadioButton GAZO;
         private System.Windows.Forms.Button button3;
     }
 }

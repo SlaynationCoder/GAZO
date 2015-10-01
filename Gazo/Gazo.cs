@@ -11,7 +11,7 @@ namespace Gazo
 {
     public partial class Gazo : Form
     {
-        public static string savepath = Application.CommonAppDataPath;
+        public static string savepath = Application.UserAppDataPath;
 
         public Gazo()
         {
@@ -28,9 +28,24 @@ namespace Gazo
             //maxmize window
             this.WindowState = FormWindowState.Maximized;
 
-            //first config
+            //clear old-version configfile
+
+            System.Reflection.Assembly asm = System.Reflection.Assembly.GetExecutingAssembly();
+            string ver = asm.GetName().Version.ToString();
+
+            string[] dirs = Directory.GetDirectories(Directory.GetParent(savepath).ToString());
+
+            foreach (var folder in dirs)
+            {
+                if (Path.GetFileName(folder) != ver)
+                    Directory.Delete(folder, true);
+
+            }
+
+            //first setting
             if (!File.Exists(savepath + @"\config.xml"))
             {
+                Info("初期設定を行ってください。");
                 this.Visible = false;
                 new SettingForm().ShowDialog();
                 this.Visible = true;
@@ -157,6 +172,9 @@ namespace Gazo
 
                 //Shot!!!
                 Shot(bmp);
+
+                //close
+                this.Close();
             }
 
         }
@@ -172,18 +190,13 @@ namespace Gazo
         void Shot(Bitmap bmp)
         {
 
-
             //playsound
             Stream strm = Properties.Resources.sound;
             System.Media.SoundPlayer player = new System.Media.SoundPlayer(strm);
             player.Play();
 
             //copy clipboard PNG
-            System.IO.MemoryStream mms1 =new System.IO.MemoryStream();
-            bmp.Save(mms1,System.Drawing.Imaging.ImageFormat.Png);
-            System.Drawing.Image img = System.Drawing.Image.FromStream(mms1);
-
-            Clipboard.SetImage(img);
+            Clipboard.SetImage(bmp);
 
             //found config?
             if (!File.Exists(savepath + @"\config.xml"))
@@ -258,11 +271,6 @@ namespace Gazo
                     Gyazo gyazoAPI = new Gyazo("e3177a1fa01bf6aa55de6bbd54d00fe6fb8e2b1e7068d417135277c21a8085a3");
                     url = gyazoAPI.Upload(bmp) + "?api";
                 }
-                else if (gazoconf.Uploader == "GAZO")
-                {
-                    GazoAPI gazoAPI = new GazoAPI();
-                    url = gazoAPI.Upload(bmp);
-                }
 
                 //copy URL
                 if (gazoconf.Upload_CopyUrl)
@@ -283,8 +291,6 @@ namespace Gazo
             //playsound wait
             Thread.Sleep(300);
 
-            //force CLOSE
-            Application.Exit();
 
         }
 

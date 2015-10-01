@@ -44,10 +44,6 @@ namespace Gazo
             {
                 gyazo.Checked = true;
             }
-            else if (gazoconf.Uploader == "GAZO")
-            {
-                GAZO.Checked = true;
-            }
 
             //savetype
             if (gazoconf.FileSave_Type == "PNG")
@@ -118,10 +114,6 @@ namespace Gazo
             {
                 gazoconf.Uploader = "GYAZO";
             }
-            else if (GAZO.Checked)
-            {
-                gazoconf.Uploader = "GAZO";
-            }
 
             //savetype
             if(PNG.Checked)
@@ -178,10 +170,19 @@ namespace Gazo
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            if (File.Exists(Gazo.savepath + @"\log.txt"))
+            try
             {
-                Process.Start(Gazo.savepath + @"\log.txt");
+                if (File.Exists(Gazo.savepath + @"\log.txt"))
+                {
+                    Process.Start(Gazo.savepath + @"\log.txt");
+                }
             }
+            catch (Exception ex)
+            {
+
+                Gazo.Warn("Error " + ex.Message);
+            }
+           
         }
     }
 }
